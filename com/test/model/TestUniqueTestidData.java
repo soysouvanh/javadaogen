@@ -22,6 +22,8 @@ public class TestUniqueTestidData {
 	
 	@Override
 	public String toString() {
-		return "TestUniqueTestidData{" + "testid='" + testid + '\'' + "}";
+		return "TestUniqueTestidData{"
+			+                 "testid='" + testid + '\''
+			+ "}";
 	}
 }

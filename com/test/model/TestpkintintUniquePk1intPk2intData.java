@@ -32,7 +32,9 @@ this.pk2int = pk2int;
 	
 	@Override
 	public String toString() {
-		return "TestpkintintUniquePk1intPk2intData{" + "pk1int='" + pk1int + '\'' + ", " +
-"pk2int='" + pk2int + '\'' + "}";
+		return "TestpkintintUniquePk1intPk2intData{"
+			+                 "pk1int='" + pk1int + '\'' + ", " +
+                "pk2int='" + pk2int + '\''
+			+ "}";
 	}
 }

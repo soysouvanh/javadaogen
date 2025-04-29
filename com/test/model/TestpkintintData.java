@@ -72,11 +72,13 @@ this.idx22 = idx22;
 	
 	@Override
 	public String toString() {
-		return "TestpkintintData{" + "pk1int='" + pk1int + '\'' + ", " +
-"pk2int='" + pk2int + '\'' + ", " +
-"label='" + label + '\'' + ", " +
-"language='" + language + '\'' + ", " +
-"idx12='" + idx12 + '\'' + ", " +
-"idx22='" + idx22 + '\'' + "}";
+		return "TestpkintintData{"
+			+                 "pk1int='" + pk1int + '\'' + ", " +
+                "pk2int='" + pk2int + '\'' + ", " +
+                "label='" + label + '\'' + ", " +
+                "language='" + language + '\'' + ", " +
+                "idx12='" + idx12 + '\'' + ", " +
+                "idx22='" + idx22 + '\''
+			+ "}";
 	}
 }

@@ -148,7 +148,7 @@ public class EmailDao {
 		try (Connection conn = getConnection();
 			PreparedStatement pstmt = conn.prepareStatement(sql)) {
 			
-{parameter_setting_block}
+			pstmt.setObject(1, uniqueData.getEmail());
 			
 			try (ResultSet rs = pstmt.executeQuery()) {
 				if (rs.next()) {

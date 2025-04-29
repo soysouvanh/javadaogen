@@ -16,6 +16,8 @@ ${field_declarations}
 	
 	@Override
 	public String toString() {
-		return "${className}{" + ${toString_content} + "}";
+		return "${className}{"
+			+ ${toString_content}
+			+ "}";
 	}
 }

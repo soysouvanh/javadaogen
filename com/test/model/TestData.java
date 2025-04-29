@@ -52,9 +52,11 @@ this.active = active;
 	
 	@Override
 	public String toString() {
-		return "TestData{" + "testid='" + testid + '\'' + ", " +
-"language='" + language + '\'' + ", " +
-"label='" + label + '\'' + ", " +
-"active='" + active + '\'' + "}";
+		return "TestData{"
+			+                 "testid='" + testid + '\'' + ", " +
+                "language='" + language + '\'' + ", " +
+                "label='" + label + '\'' + ", " +
+                "active='" + active + '\''
+			+ "}";
 	}
 }

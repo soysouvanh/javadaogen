@@ -62,10 +62,12 @@ this.cityid = cityid;
 	
 	@Override
 	public String toString() {
-		return "AddressData{" + "addressid='" + addressid + '\'' + ", " +
-"address='" + address + '\'' + ", " +
-"place='" + place + '\'' + ", " +
-"zipcode='" + zipcode + '\'' + ", " +
-"cityid='" + cityid + '\'' + "}";
+		return "AddressData{"
+			+                 "addressid='" + addressid + '\'' + ", " +
+                "address='" + address + '\'' + ", " +
+                "place='" + place + '\'' + ", " +
+                "zipcode='" + zipcode + '\'' + ", " +
+                "cityid='" + cityid + '\''
+			+ "}";
 	}
 }

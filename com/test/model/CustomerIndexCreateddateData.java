@@ -23,6 +23,8 @@ public class CustomerIndexCreateddateData {
 	
 	@Override
 	public String toString() {
-		return "CustomerIndexCreateddateData{" + "createddate='" + createddate + '\'' + "}";
+		return "CustomerIndexCreateddateData{"
+			+                 "createddate='" + createddate + '\''
+			+ "}";
 	}
 }

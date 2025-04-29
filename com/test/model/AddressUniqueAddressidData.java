@@ -22,6 +22,8 @@ public class AddressUniqueAddressidData {
 	
 	@Override
 	public String toString() {
-		return "AddressUniqueAddressidData{" + "addressid='" + addressid + '\'' + "}";
+		return "AddressUniqueAddressidData{"
+			+                 "addressid='" + addressid + '\''
+			+ "}";
 	}
 }

@@ -85,12 +85,14 @@ this.createdtime = createdtime;
 	
 	@Override
 	public String toString() {
-		return "CustomerData{" + "customerid='" + customerid + '\'' + ", " +
-"customercode='" + customercode + '\'' + ", " +
-"civilityid='" + civilityid + '\'' + ", " +
-"lastname='" + lastname + '\'' + ", " +
-"updated='" + updated + '\'' + ", " +
-"createddate='" + createddate + '\'' + ", " +
-"createdtime='" + createdtime + '\'' + "}";
+		return "CustomerData{"
+			+                 "customerid='" + customerid + '\'' + ", " +
+                "customercode='" + customercode + '\'' + ", " +
+                "civilityid='" + civilityid + '\'' + ", " +
+                "lastname='" + lastname + '\'' + ", " +
+                "updated='" + updated + '\'' + ", " +
+                "createddate='" + createddate + '\'' + ", " +
+                "createdtime='" + createdtime + '\''
+			+ "}";
 	}
 }

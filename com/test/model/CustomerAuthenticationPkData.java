@@ -22,6 +22,8 @@ public class CustomerAuthenticationPkData {
 	
 	@Override
 	public String toString() {
-		return "CustomerAuthenticationPkData{" + "customerid='" + customerid + '\'' + "}";
+		return "CustomerAuthenticationPkData{"
+			+                 "customerid='" + customerid + '\''
+			+ "}";
 	}
 }

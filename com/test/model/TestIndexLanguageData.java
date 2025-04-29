@@ -22,6 +22,8 @@ public class TestIndexLanguageData {
 	
 	@Override
 	public String toString() {
-		return "TestIndexLanguageData{" + "language='" + language + '\'' + "}";
+		return "TestIndexLanguageData{"
+			+                 "language='" + language + '\''
+			+ "}";
 	}
 }

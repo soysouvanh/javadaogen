@@ -14,7 +14,7 @@
 		try (Connection conn = getConnection();
 			PreparedStatement pstmt = conn.prepareStatement(sql)) {
 			
-{parameter_setting_block}
+${parameter_setting_block}
 			
 			try (ResultSet rs = pstmt.executeQuery()) {
 				if (rs.next()) {

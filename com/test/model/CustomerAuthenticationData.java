@@ -73,11 +73,13 @@ this.updated = updated;
 	
 	@Override
 	public String toString() {
-		return "CustomerAuthenticationData{" + "customerid='" + customerid + '\'' + ", " +
-"pseudonym='" + pseudonym + '\'' + ", " +
-"emailid='" + emailid + '\'' + ", " +
-"password='" + password + '\'' + ", " +
-"active='" + active + '\'' + ", " +
-"updated='" + updated + '\'' + "}";
+		return "CustomerAuthenticationData{"
+			+                 "customerid='" + customerid + '\'' + ", " +
+                "pseudonym='" + pseudonym + '\'' + ", " +
+                "emailid='" + emailid + '\'' + ", " +
+                "password='" + password + '\'' + ", " +
+                "active='" + active + '\'' + ", " +
+                "updated='" + updated + '\''
+			+ "}";
 	}
 }

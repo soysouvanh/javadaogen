@@ -156,7 +156,7 @@ public class CustomerAuthenticationDao {
 		try (Connection conn = getConnection();
 			PreparedStatement pstmt = conn.prepareStatement(sql)) {
 			
-{parameter_setting_block}
+			pstmt.setObject(1, uniqueData.getEmailid());
 			
 			try (ResultSet rs = pstmt.executeQuery()) {
 				if (rs.next()) {
@@ -218,7 +218,7 @@ public class CustomerAuthenticationDao {
 		try (Connection conn = getConnection();
 			PreparedStatement pstmt = conn.prepareStatement(sql)) {
 			
-{parameter_setting_block}
+			pstmt.setObject(1, uniqueData.getPseudonym());
 			
 			try (ResultSet rs = pstmt.executeQuery()) {
 				if (rs.next()) {

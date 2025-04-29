@@ -22,6 +22,8 @@ public class EmailUniqueEmailData {
 	
 	@Override
 	public String toString() {
-		return "EmailUniqueEmailData{" + "email='" + email + '\'' + "}";
+		return "EmailUniqueEmailData{"
+			+                 "email='" + email + '\''
+			+ "}";
 	}
 }

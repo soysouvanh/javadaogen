@@ -32,7 +32,9 @@ this.addressid = addressid;
 	
 	@Override
 	public String toString() {
-		return "CustomerAddressUniqueCustomeridAddressidData{" + "customerid='" + customerid + '\'' + ", " +
-"addressid='" + addressid + '\'' + "}";
+		return "CustomerAddressUniqueCustomeridAddressidData{"
+			+                 "customerid='" + customerid + '\'' + ", " +
+                "addressid='" + addressid + '\''
+			+ "}";
 	}
 }

@@ -152,7 +152,8 @@ public class TestDao {
 		try (Connection conn = getConnection();
 			PreparedStatement pstmt = conn.prepareStatement(sql)) {
 			
-{parameter_setting_block}
+			pstmt.setObject(1, uniqueData.getLanguage());
+			pstmt.setObject(2, uniqueData.getLabel());
 			
 			try (ResultSet rs = pstmt.executeQuery()) {
 				if (rs.next()) {

@@ -22,6 +22,8 @@ public class CustomerIndexLastnameData {
 	
 	@Override
 	public String toString() {
-		return "CustomerIndexLastnameData{" + "lastname='" + lastname + '\'' + "}";
+		return "CustomerIndexLastnameData{"
+			+                 "lastname='" + lastname + '\''
+			+ "}";
 	}
 }

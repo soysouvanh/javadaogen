@@ -32,7 +32,9 @@ this.addressid = addressid;
 	
 	@Override
 	public String toString() {
-		return "CustomerAddressData{" + "customerid='" + customerid + '\'' + ", " +
-"addressid='" + addressid + '\'' + "}";
+		return "CustomerAddressData{"
+			+                 "customerid='" + customerid + '\'' + ", " +
+                "addressid='" + addressid + '\''
+			+ "}";
 	}
 }

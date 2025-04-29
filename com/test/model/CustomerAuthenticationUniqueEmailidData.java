@@ -22,6 +22,8 @@ public class CustomerAuthenticationUniqueEmailidData {
 	
 	@Override
 	public String toString() {
-		return "CustomerAuthenticationUniqueEmailidData{" + "emailid='" + emailid + '\'' + "}";
+		return "CustomerAuthenticationUniqueEmailidData{"
+			+                 "emailid='" + emailid + '\''
+			+ "}";
 	}
 }

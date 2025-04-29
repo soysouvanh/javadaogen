@@ -22,6 +22,8 @@ public class TestIndexLabelData {
 	
 	@Override
 	public String toString() {
-		return "TestIndexLabelData{" + "label='" + label + '\'' + "}";
+		return "TestIndexLabelData{"
+			+                 "label='" + label + '\''
+			+ "}";
 	}
 }

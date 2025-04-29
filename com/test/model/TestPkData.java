@@ -22,6 +22,8 @@ public class TestPkData {
 	
 	@Override
 	public String toString() {
-		return "TestPkData{" + "testid='" + testid + '\'' + "}";
+		return "TestPkData{"
+			+                 "testid='" + testid + '\''
+			+ "}";
 	}
 }

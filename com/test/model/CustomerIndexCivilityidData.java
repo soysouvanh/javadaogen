@@ -22,6 +22,8 @@ public class CustomerIndexCivilityidData {
 	
 	@Override
 	public String toString() {
-		return "CustomerIndexCivilityidData{" + "civilityid='" + civilityid + '\'' + "}";
+		return "CustomerIndexCivilityidData{"
+			+                 "civilityid='" + civilityid + '\''
+			+ "}";
 	}
 }

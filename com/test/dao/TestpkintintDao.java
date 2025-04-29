@@ -158,7 +158,8 @@ public class TestpkintintDao {
 		try (Connection conn = getConnection();
 			PreparedStatement pstmt = conn.prepareStatement(sql)) {
 			
-{parameter_setting_block}
+			pstmt.setObject(1, uniqueData.getLabel());
+			pstmt.setObject(2, uniqueData.getLanguage());
 			
 			try (ResultSet rs = pstmt.executeQuery()) {
 				if (rs.next()) {

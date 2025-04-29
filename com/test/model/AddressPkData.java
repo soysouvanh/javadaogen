@@ -22,6 +22,8 @@ public class AddressPkData {
 	
 	@Override
 	public String toString() {
-		return "AddressPkData{" + "addressid='" + addressid + '\'' + "}";
+		return "AddressPkData{"
+			+                 "addressid='" + addressid + '\''
+			+ "}";
 	}
 }

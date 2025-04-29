@@ -32,7 +32,9 @@ this.email = email;
 	
 	@Override
 	public String toString() {
-		return "EmailData{" + "emailid='" + emailid + '\'' + ", " +
-"email='" + email + '\'' + "}";
+		return "EmailData{"
+			+                 "emailid='" + emailid + '\'' + ", " +
+                "email='" + email + '\''
+			+ "}";
 	}
 }

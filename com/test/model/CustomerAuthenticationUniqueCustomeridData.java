@@ -22,6 +22,8 @@ public class CustomerAuthenticationUniqueCustomeridData {
 	
 	@Override
 	public String toString() {
-		return "CustomerAuthenticationUniqueCustomeridData{" + "customerid='" + customerid + '\'' + "}";
+		return "CustomerAuthenticationUniqueCustomeridData{"
+			+                 "customerid='" + customerid + '\''
+			+ "}";
 	}
 }

@@ -22,6 +22,8 @@ public class TestIndexActiveData {
 	
 	@Override
 	public String toString() {
-		return "TestIndexActiveData{" + "active='" + active + '\'' + "}";
+		return "TestIndexActiveData{"
+			+                 "active='" + active + '\''
+			+ "}";
 	}
 }

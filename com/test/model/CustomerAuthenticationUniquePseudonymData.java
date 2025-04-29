@@ -22,6 +22,8 @@ public class CustomerAuthenticationUniquePseudonymData {
 	
 	@Override
 	public String toString() {
-		return "CustomerAuthenticationUniquePseudonymData{" + "pseudonym='" + pseudonym + '\'' + "}";
+		return "CustomerAuthenticationUniquePseudonymData{"
+			+                 "pseudonym='" + pseudonym + '\''
+			+ "}";
 	}
 }

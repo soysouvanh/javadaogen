@@ -87,7 +87,8 @@ public class CustomerAddressDao {
 		try (Connection conn = getConnection();
 			PreparedStatement pstmt = conn.prepareStatement(sql)) {
 			
-{parameter_setting_block}
+			pstmt.setObject(1, uniqueData.getCustomerid());
+			pstmt.setObject(2, uniqueData.getAddressid());
 			
 			try (ResultSet rs = pstmt.executeQuery()) {
 				if (rs.next()) {

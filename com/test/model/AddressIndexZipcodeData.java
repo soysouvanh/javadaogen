@@ -22,6 +22,8 @@ public class AddressIndexZipcodeData {
 	
 	@Override
 	public String toString() {
-		return "AddressIndexZipcodeData{" + "zipcode='" + zipcode + '\'' + "}";
+		return "AddressIndexZipcodeData{"
+			+                 "zipcode='" + zipcode + '\''
+			+ "}";
 	}
 }

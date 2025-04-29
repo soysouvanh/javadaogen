@@ -32,7 +32,9 @@ this.idx22 = idx22;
 	
 	@Override
 	public String toString() {
-		return "TestpkintintIndexIdx12Idx22Data{" + "idx12='" + idx12 + '\'' + ", " +
-"idx22='" + idx22 + '\'' + "}";
+		return "TestpkintintIndexIdx12Idx22Data{"
+			+                 "idx12='" + idx12 + '\'' + ", " +
+                "idx22='" + idx22 + '\''
+			+ "}";
 	}
 }

@@ -22,6 +22,8 @@ public class AddressIndexCityidData {
 	
 	@Override
 	public String toString() {
-		return "AddressIndexCityidData{" + "cityid='" + cityid + '\'' + "}";
+		return "AddressIndexCityidData{"
+			+                 "cityid='" + cityid + '\''
+			+ "}";
 	}
 }

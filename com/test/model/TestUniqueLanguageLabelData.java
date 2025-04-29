@@ -32,7 +32,9 @@ this.label = label;
 	
 	@Override
 	public String toString() {
-		return "TestUniqueLanguageLabelData{" + "language='" + language + '\'' + ", " +
-"label='" + label + '\'' + "}";
+		return "TestUniqueLanguageLabelData{"
+			+                 "language='" + language + '\'' + ", " +
+                "label='" + label + '\''
+			+ "}";
 	}
 }

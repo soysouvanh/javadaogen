@@ -780,10 +780,8 @@ public class DaoGenerator {
 	private String generatePojoToStringContent(List<ColumnInfo> columns) {
 		// Format: " \"javaName='\" + javaName + '\\''"
 		return columns.stream()
-			// Add single quotes around the value, useful for string representation.
-			.map(c -> String.format("\"%s='\" + %s + '\\''", c.javaName, c.javaName))
-			// Join with ", " separator.
-			.collect(Collectors.joining(" + \", \" +\n"));
+			.map(c -> "                \"" + c.javaName + "=\'\" + " + c.javaName + " + '\\''")
+            .collect(Collectors.joining(" + \", \" +\n"));
 	}
 
 	// --- DAO Generation Helpers ---

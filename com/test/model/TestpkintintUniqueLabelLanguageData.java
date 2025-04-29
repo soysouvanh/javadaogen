@@ -32,7 +32,9 @@ this.language = language;
 	
 	@Override
 	public String toString() {
-		return "TestpkintintUniqueLabelLanguageData{" + "label='" + label + '\'' + ", " +
-"language='" + language + '\'' + "}";
+		return "TestpkintintUniqueLabelLanguageData{"
+			+                 "label='" + label + '\'' + ", " +
+                "language='" + language + '\''
+			+ "}";
 	}
 }

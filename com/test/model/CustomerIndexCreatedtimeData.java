@@ -23,6 +23,8 @@ public class CustomerIndexCreatedtimeData {
 	
 	@Override
 	public String toString() {
-		return "CustomerIndexCreatedtimeData{" + "createdtime='" + createdtime + '\'' + "}";
+		return "CustomerIndexCreatedtimeData{"
+			+                 "createdtime='" + createdtime + '\''
+			+ "}";
 	}
 }

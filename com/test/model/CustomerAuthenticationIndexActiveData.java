@@ -22,6 +22,8 @@ public class CustomerAuthenticationIndexActiveData {
 	
 	@Override
 	public String toString() {
-		return "CustomerAuthenticationIndexActiveData{" + "active='" + active + '\'' + "}";
+		return "CustomerAuthenticationIndexActiveData{"
+			+                 "active='" + active + '\''
+			+ "}";
 	}
 }

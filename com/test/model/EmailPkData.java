@@ -22,6 +22,8 @@ public class EmailPkData {
 	
 	@Override
 	public String toString() {
-		return "EmailPkData{" + "emailid='" + emailid + '\'' + "}";
+		return "EmailPkData{"
+			+                 "emailid='" + emailid + '\''
+			+ "}";
 	}
 }
