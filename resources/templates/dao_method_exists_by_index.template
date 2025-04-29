@@ -1,25 +1,20 @@
-    /**
-     * Checks if at least one record exists in the ${tableName} table
-     * matching the index columns: ${indexColumnsList}.
-     * This method checks based on index '${indexName}'.
-     * @param idxData The object containing the index values.
-     * @return true if at least one matching record exists, false otherwise.
-     * @throws SQLException if a database access error occurs.
-     */
-    public boolean existsBy${methodNameSuffix}(${indexPojoName} idxData) throws SQLException {
-        // Using SELECT 1 is generally efficient for checking existence
-        // We add LIMIT 1 for databases that optimize this better.
-        final String sql = "SELECT 1 FROM ${tableName} WHERE ${where_clause} LIMIT 1";
-        try (Connection conn = getConnection();
-         	PreparedStatement pstmt = conn.prepareStatement(sql)) {
 
-			${parameter_setting_block}
 
-            try (ResultSet rs = pstmt.executeQuery()) {
-                // If rs.next() is true, it means the SELECT found at least one row.
-                return rs.next();
-            }
-        }
-        // If any SQLException occurs, it will be thrown.
-        // If no rows are found, rs.next() returns false, which is correctly returned.
-    }
+	/**
+	 * Checks if at least one record exists in the ${tableName} table
+	 * matching the index columns: ${indexColumnsList}.
+	 * This method checks based on index '${indexName}'.
+	 * @param indexData The object containing the index values.
+	 * @return true if at least one matching record exists, false otherwise.
+	 * @throws SQLException if a database access error occurs.
+	 */
+	public boolean exists${methodNameSuffix}(${indexPojoName} indexData) throws SQLException {
+		final String sql = "SELECT 1 FROM ${tableName} WHERE ${where_clause} LIMIT 1";
+		try (Connection conn = getConnection(); PreparedStatement pstmt = conn.prepareStatement(sql)) {
+${parameter_setting_block}
+			
+			try (ResultSet rs = pstmt.executeQuery()) {
+				return rs.next();
+			}
+		}
+	}

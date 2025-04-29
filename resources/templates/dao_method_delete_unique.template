@@ -1,17 +1,19 @@
-    /**
-     * Deletes records from ${tableName} based on the unique index columns: ${indexColumnsList}.
-     * This method uses the unique index '${indexName}'. Should affect 0 or 1 row.
-     * @param uniData The object containing the unique index values.
-     * @throws SQLException if a database access error occurs.
-     * @return The number of rows affected (should be 0 or 1).
-     */
-    public int delete${methodNameSuffix}(${indexPojoName} uniData) throws SQLException {
-        final String sql = "${sqlQuery}"; // DELETE FROM ... WHERE unique_cols = ? ...
-        try (Connection conn = getConnection();
-        	PreparedStatement pstmt = conn.prepareStatement(sql)) {
 
-			${parameter_setting_block} // Set parameters for unique index columns
 
-            return pstmt.executeUpdate();
-        }
-    }
+	/**
+	 * Deletes records from ${tableName} based on the unique index columns: ${indexColumnsList}.
+	 * This method uses the unique index '${indexName}'. Should affect 0 or 1 row.
+	 * @param uniqueData The object containing the unique index values.
+	 * @throws SQLException if a database access error occurs.
+	 * @return The number of rows affected (should be 0 or 1).
+	 */
+	public int delete${methodNameSuffix}(${indexPojoName} uniqueData) throws SQLException {
+		final String sql = "${sqlQuery}";
+		try (Connection conn = getConnection();
+			PreparedStatement pstmt = conn.prepareStatement(sql)) {
+			
+${parameter_setting_block}
+			
+			return pstmt.executeUpdate();
+		}
+	}

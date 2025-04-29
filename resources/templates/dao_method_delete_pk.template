@@ -1,16 +1,18 @@
-    /**
-     * Deletes a record from the ${tableName} table based on its primary key.
-     * @param pkData The object containing the primary key values.
-     * @throws SQLException if a database access error occurs.
-     * @return The number of rows affected (should be 1 if the delete was successful and the PK exists).
-     */
-    public int delete(${pkPojoName} pkData) throws SQLException {
-        final String sql = "${sqlQuery}";
-        try (Connection conn = getConnection();
-         	PreparedStatement pstmt = conn.prepareStatement(sql)) {
 
-			${parameter_setting_block} // This block should contain setters for PK columns for the WHERE clause
 
-            return pstmt.executeUpdate();
-        }
-    }
+	/**
+	 * Deletes a record from the ${tableName} table based on its primary key.
+	 * @param pkData The object containing the primary key values.
+	 * @throws SQLException if a database access error occurs.
+	 * @return The number of rows affected (should be 1 if the delete was successful and the PK exists).
+	 */
+	public int delete(${pkPojoName} pkData) throws SQLException {
+		final String sql = "${sqlQuery}";
+		try (Connection conn = getConnection();
+			PreparedStatement pstmt = conn.prepareStatement(sql)) {
+			
+${parameter_setting_block}
+			
+			return pstmt.executeUpdate();
+		}
+	}

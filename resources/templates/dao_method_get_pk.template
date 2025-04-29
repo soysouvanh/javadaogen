@@ -1,24 +1,26 @@
-    /**
-     * Retrieves records from the ${tableName} table based on the primary key.
-     * Since it's a primary key lookup, this will return an array of 0 or 1 element.
-     * @param pkData The object containing the primary key values.
-     * @return An array containing the matching record, or an empty array if not found.
-     * @throws SQLException if a database access error occurs.
-     */
-    public ${dataPojoName}[] get(${pkPojoName} pkData) throws SQLException {
-        List<${dataPojoName}> results = new ArrayList<>();
-        String sql = "${sqlQuery}";
 
-        try (Connection conn = getConnection();
-             PreparedStatement pstmt = conn.prepareStatement(sql)) {
 
-			${parameter_setting_block}
-
-            try (ResultSet rs = pstmt.executeQuery()) {
-                if (rs.next()) { // Expecting 0 or 1 for PK
-                    results.add(${mapRowMethodName}(rs));
-                }
-            }
-        }
-        return results.toArray(new ${dataPojoName}[0]);
-    }
+	/**
+	 * Retrieves records from the ${tableName} table based on the primary key.
+	 * Since it's a primary key lookup, this will return an array of 0 or 1 element.
+	 * @param pkData The object containing the primary key values.
+	 * @return An array containing the matching record, or an empty array if not found.
+	 * @throws SQLException if a database access error occurs.
+	 */
+	public ${dataPojoName}[] get(${pkPojoName} pkData) throws SQLException {
+		List<${dataPojoName}> results = new ArrayList<>();
+		String sql = "${sqlQuery}";
+		
+		try (Connection conn = getConnection();
+			 PreparedStatement pstmt = conn.prepareStatement(sql)) {
+			
+${parameter_setting_block}
+			
+			try (ResultSet rs = pstmt.executeQuery()) {
+				if (rs.next()) {
+					results.add(${mapRowMethodName}(rs));
+				}
+			}
+		}
+		return results.toArray(new ${dataPojoName}[0]);
+	}

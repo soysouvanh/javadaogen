@@ -1,17 +1,19 @@
-    /**
-     * Updates an existing record in the ${tableName} table.
-     * The record is identified by its primary key columns, which are also present in the data object.
-     * @param data The data object containing the new values and the primary key.
-     * @throws SQLException if a database access error occurs.
-     * @return The number of rows affected (should be 1 if the update was successful and the PK exists).
-     */
-    public int update(${dataPojoName} data) throws SQLException {
-        final String sql = "${sqlQuery}";
-        try (Connection conn = getConnection();
-         	PreparedStatement pstmt = conn.prepareStatement(sql)) {
 
-			${parameter_setting_block} // This block should contain setters for non-PK columns first, then PK columns for WHERE clause
 
-            return pstmt.executeUpdate();
-        }
-    }
+	/**
+	 * Updates an existing record in the ${tableName} table.
+	 * The record is identified by its primary key columns, which are also present in the data object.
+	 * @param data The data object containing the new values and the primary key.
+	 * @throws SQLException if a database access error occurs.
+	 * @return The number of rows affected (should be 1 if the update was successful and the PK exists).
+	 */
+	public int update(${dataPojoName} data) throws SQLException {
+		final String sql = "${sqlQuery}";
+		try (Connection conn = getConnection();
+		 	PreparedStatement pstmt = conn.prepareStatement(sql)) {
+
+${parameter_setting_block}
+
+			return pstmt.executeUpdate();
+		}
+	}
