@@ -1,0 +1,15 @@
+    /**
+     * Inserts a new record into the ${tableName} table.
+     * @param data The data object containing values to insert.
+     * @throws SQLException if a database access error occurs.
+     */
+    public void insert(${dataPojoName} data) throws SQLException {
+        String sql = "${sqlQuery}";
+        try (Connection conn = getConnection();
+			PreparedStatement pstmt = conn.prepareStatement(sql)) {
+
+			${parameter_setting_block}
+
+            pstmt.executeUpdate();
+        }
+    }

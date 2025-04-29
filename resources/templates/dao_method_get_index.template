@@ -1,0 +1,24 @@
+    /**
+     * Retrieves records from ${tableName} based on the index columns: ${indexColumnsList}.
+     * This method uses the index '${indexName}'.
+     * @param idxData The object containing the index values.
+     * @return An array of matching data objects, potentially empty.
+     * @throws SQLException if a database access error occurs.
+     */
+    public ${dataPojoName}[] get${methodNameSuffix}(${indexPojoName} idxData) throws SQLException {
+        List<${dataPojoName}> results = new ArrayList<>();
+        final String sql = "${sqlQuery}"; // SELECT * FROM ... WHERE index_cols = ? ...
+
+        try (Connection conn = getConnection();
+         	PreparedStatement pstmt = conn.prepareStatement(sql)) {
+
+			${parameter_setting_block} // Set parameters for index columns
+
+            try (ResultSet rs = pstmt.executeQuery()) {
+                while (rs.next()) {
+                    results.add(${mapRowMethodName}(rs));
+                }
+            }
+        }
+        return results.toArray(new ${dataPojoName}[0]);
+    }

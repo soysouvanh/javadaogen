@@ -1,0 +1,24 @@
+    /**
+     * Retrieves a single record from ${tableName} based on the unique index columns: ${indexColumnsList}.
+     * This method uses the unique index '${indexName}'.
+     * @param uniData The object containing the unique index values.
+     * @return The matching data object, or null if not found.
+     * @throws SQLException if a database access error occurs.
+     */
+    public ${dataPojoName} get${methodNameSuffix}(${indexPojoName} uniData) throws SQLException {
+        final String sql = "${sqlQuery}"; // SELECT * FROM ... WHERE unique_cols = ? ...
+        ${dataPojoName} result = null;
+
+        try (Connection conn = getConnection();
+         	PreparedStatement pstmt = conn.prepareStatement(sql)) {
+
+			{parameter_setting_block} // Set parameters for unique index columns
+
+            try (ResultSet rs = pstmt.executeQuery()) {
+                if (rs.next()) { // Expecting 0 or 1 for unique index
+                    result = ${mapRowMethodName}(rs);
+                }
+            }
+        }
+        return result;
+    }

@@ -1,0 +1,22 @@
+package ${packageName};
+
+${imports_block}
+
+public class ${className} {
+
+	${field_declarations}
+
+    public ${className}() {
+    }
+
+    public ${className}(${constructor_params}) {
+		${constructor_assignments}
+    }
+
+	${getters_setters}
+
+    @Override
+    public String toString() {
+        return "${className}{" + ${toString_content} + "}";
+    }
+}

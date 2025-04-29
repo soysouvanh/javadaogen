@@ -1,0 +1,11 @@
+    /**
+     * Helper method to map a ResultSet row to a ${dataPojoName} object.
+     * @param rs The ResultSet positioned at the row to map.
+     * @return A populated ${dataPojoName} object.
+     * @throws SQLException if a database access error occurs during mapping.
+     */
+    private ${dataPojoName} ${mapRowMethodName}(ResultSet rs) throws SQLException {
+        ${dataPojoName} data = new ${dataPojoName}();
+		${resultSetMappingBlock} // This block contains data.setXxx(rs.getObject(...)); lines
+        return data;
+    }
